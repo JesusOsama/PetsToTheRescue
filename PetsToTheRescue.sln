@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsToTheRescue", "PetsToTheRescue\PetsToTheRescue.csproj", "{A4ED8601-F4FC-4741-B5E2-1440762B19EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetsToTheRescue", "PetsToTheRescue\PetsToTheRescue.csproj", "{A4ED8601-F4FC-4741-B5E2-1440762B19EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDomain", "LibraryDomain\LibraryDomain.csproj", "{44BE00D2-3EDD-4843-8302-12D0E0217C76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A4ED8601-F4FC-4741-B5E2-1440762B19EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4ED8601-F4FC-4741-B5E2-1440762B19EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4ED8601-F4FC-4741-B5E2-1440762B19EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BE00D2-3EDD-4843-8302-12D0E0217C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BE00D2-3EDD-4843-8302-12D0E0217C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BE00D2-3EDD-4843-8302-12D0E0217C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BE00D2-3EDD-4843-8302-12D0E0217C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
