@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace LibraryDomain.Infraestructure.Data
+namespace LibraryDomain.Infrastructure.Data
 {
     public partial class PetsToTheRescueContext : DbContext
     {
@@ -23,7 +23,6 @@ namespace LibraryDomain.Infraestructure.Data
         public virtual DbSet<Mascota> Mascota { get; set; }
         public virtual DbSet<RegistroAdopcion> RegistroAdopcion { get; set; }
         public virtual DbSet<RegistroMascotaEncontrada> RegistroMascotaEncontrada { get; set; }
-        public virtual DbSet<RegistroMascotaEncontradas> RegistroMascotaEncontradas { get; set; }
         public virtual DbSet<Ubigeo> Ubigeo { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
 
@@ -174,31 +173,6 @@ namespace LibraryDomain.Infraestructure.Data
                     .WithMany(p => p.RegistroMascotaEncontrada)
                     .HasForeignKey(d => d.IdMascota)
                     .HasConstraintName("FK_RegistroMascotaEncontrada_Mascota");
-            });
-
-            modelBuilder.Entity<RegistroMascotaEncontradas>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.Property(e => e.FechaDeEncuentro).HasColumnType("datetime");
-
-                entity.Property(e => e.IdMascota).HasColumnName("Id_Mascota");
-
-                entity.Property(e => e.IdRegistroMe).HasColumnName("Id_RegistroME");
-
-                entity.Property(e => e.IdUsuario)
-                    .HasMaxLength(50)
-                    .HasColumnName("Id_Usuario");
-
-                entity.HasOne(d => d.IdMascotaNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.IdMascota)
-                    .HasConstraintName("FK_RegistroMascotaEncontradas_Mascota");
-
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK_RegistroMascotaEncontradas_Usuario");
             });
 
             modelBuilder.Entity<Ubigeo>(entity =>
