@@ -1,10 +1,11 @@
 ﻿using System;
+using LibraryDomain.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace LibraryDomain.Core.Entities
+namespace LibraryDomain.Infraestructure.Data
 {
     public partial class PetsToTheRescueContext : DbContext
     {
